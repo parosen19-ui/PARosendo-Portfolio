@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Open Graph Tags -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <title>Pierce - Trainer | Instructional Designer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Syne & Plus Jakarta Sans for modern techy creative aesthetic -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#29202a',
+                deep: '#1e171f',
+                surface: '#342935',
+                card: '#3b2f3d',
+                border: '#4a3c4d',
+                accent: '#faba00',
+                accentHover: '#e0a700',
+                accentLight: '#ffdf7a'
+              }
+            },
+            fontFamily: {
+              display: ['Syne', 'sans-serif'],
+              body: ['"Plus Jakarta Sans"', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #29202a;
+        color: #f3f0f4;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-display {
+        font-family: 'Syne', sans-serif;
+      }
+
+      .accent-glow {
+        box-shadow: 0 0 25px rgba(250, 186, 0, 0.15);
+      }
+
+      .accent-glow-card:hover {
+        box-shadow: 0 10px 30px -10px rgba(250, 186, 0, 0.25);
+        border-color: rgba(250, 186, 0, 0.4);
+      }
+
+      /* Subtle geometric grid background pattern */
+      .tech-grid {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(to right, rgba(250, 186, 0, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(250, 186, 0, 0.03) 1px, transparent 1px);
+      }
+    </style>
+  </head>
+  <body class="bg-brand-dark text-stone-100 min-h-screen tech-grid antialiased selection:bg-brand-accent selection:text-brand-dark flex flex-col justify-between">
+    <!-- ========================================== -->
+    <!-- NAVIGATION                                 -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/90 border-b border-brand-border/60 transition-all duration-200">
+      <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- EDIT: NAVBAR_BRAND -->
+        <a class="flex items-center gap-2 group" href="#">
+          <span class="w-9 h-9 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-accent group-hover:border-brand-accent transition-colors shadow-sm">
+            <i class="w-5 h-5" data-lucide="layers"></i>
+          </span>
+          <span class="font-display font-bold text-xl tracking-tight text-white group-hover:text-brand-accent transition-colors">FCBPortfolio</span>
+        </a>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
+          <a class="hover:text-brand-accent transition-colors flex items-center gap-1.5 py-1" href="#about">
+            <i class="w-4 h-4 text-brand-accent/80" data-lucide="user"></i> About </a>
+          <a class="hover:text-brand-accent transition-colors flex items-center gap-1.5 py-1" href="#projects">
+            <i class="w-4 h-4 text-brand-accent/80" data-lucide="folder-kanban"></i> Projects </a>
+          <a class="hover:text-brand-accent transition-colors flex items-center gap-1.5 py-1" href="#skills-tools">
+            <i class="w-4 h-4 text-brand-accent/80" data-lucide="cpu"></i> Skills &amp; Tools </a>
+          <a class="hover:text-brand-accent transition-colors flex items-center gap-1.5 py-1" href="#contact">
+            <i class="w-4 h-4 text-brand-accent/80" data-lucide="mail"></i> Contact </a>
+        </nav>
+        <!-- Mobile Menu Toggle Button -->
+        <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 rounded-lg text-stone-300 hover:text-brand-accent hover:bg-brand-surface border border-transparent hover:border-brand-border transition-all" id="mobile-menu-btn">
+          <i class="w-6 h-6" data-lucide="menu"></i>
+        </button>
+      </div>
+      <!-- Mobile Dropdown Navigation -->
+      <div class="hidden md:hidden border-b border-brand-border bg-brand-surface/95 px-6 py-4 flex-col gap-4 text-sm font-medium" id="mobile-nav">
+        <a class="mobile-nav-link flex items-center gap-2 py-2 text-stone-300 hover:text-brand-accent" href="#about">
+          <i class="w-4 h-4 text-brand-accent" data-lucide="user"></i> About </a>
+        <a class="mobile-nav-link flex items-center gap-2 py-2 text-stone-300 hover:text-brand-accent" href="#projects">
+          <i class="w-4 h-4 text-brand-accent" data-lucide="folder-kanban"></i> Projects </a>
+        <a class="mobile-nav-link flex items-center gap-2 py-2 text-stone-300 hover:text-brand-accent" href="#skills-tools">
+          <i class="w-4 h-4 text-brand-accent" data-lucide="cpu"></i> Skills &amp; Tools </a>
+        <a class="mobile-nav-link flex items-center gap-2 py-2 text-stone-300 hover:text-brand-accent" href="#contact">
+          <i class="w-4 h-4 text-brand-accent" data-lucide="mail"></i> Contact </a>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <!-- ========================================== -->
+      <!-- LANDING / HERO SECTION                     -->
+      <!-- ========================================== -->
+      <section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden border-b border-brand-border/40" id="hero">
+        <!-- Decorative background blur orb -->
+        <div class="absolute top-1/4 right-5 w-80 h-80 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute bottom-10 left-5 w-72 h-72 bg-purple-900/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <!-- Text Column -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+            <!-- Profession Badge / Decorative Icon -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-surface border border-brand-border text-brand-accent text-xs font-semibold tracking-wide uppercase">
+              <i class="w-3.5 h-3.5" data-lucide="sparkles"></i>
+              <span>Instructional Designer &amp; Learning Architect</span>
+            </div>
+            <!-- EDIT: YOUR_NAME -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight font-display"> Pierce Andreas Rosendo </h1>
+            <!-- EDIT: YOUR_JOB_TITLE -->
+            <p class="text-xl md:text-2xl font-medium text-brand-accent tracking-wide"> Trainer | Instructional Designer </p>
+            <!-- EDIT: SHORT_INTRODUCTION -->
+            <p class="text-base sm:text-lg text-stone-300 leading-relaxed max-w-xl"> Educator and instructional designer with
+professional learning interests in data analytics and
+HR. Experienced and skilled in course development,
+adult learning principles, and quantitative research. </p>
+            <!-- Only allowed CTA button linking strictly to #projects -->
+            <div class="pt-2">
+              <a class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold text-sm tracking-wide transition-all transform hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-brand-accent/20" href="#projects">
+                <span>View Projects</span>
+                <i class="w-4 h-4 stroke-[2.5]" data-lucide="arrow-down-right"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Profile Image Column -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative group">
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-brand-accent/40 via-brand-surface to-brand-border opacity-70 blur-sm group-hover:opacity-100 transition duration-300"></div>
+              <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden bg-brand-surface border-2 border-brand-border flex items-center justify-center">
+                <!-- EDIT: PROFILE_IMAGE -->
+                <img alt="Profile image" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" src="C:\Users\Pierce Rosendo\Downloads\stitch_instructional_designer_portfolio_template\Profile.jpg" />
+                <div class="absolute bottom-3 right-3 p-2 rounded-lg bg-brand-dark/80 backdrop-blur-md border border-brand-border text-brand-accent">
+                  <i class="w-4 h-4" data-lucide="compass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================== -->
+      <!-- ABOUT SECTION                              -->
+      <!-- ========================================== -->
+      <section class="py-20 md:py-28 border-b border-brand-border/40" id="about">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="p-2 rounded-lg bg-brand-surface border border-brand-border text-brand-accent">
+              <i class="w-5 h-5" data-lucide="user"></i>
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white font-display">About</h2>
+          </div>
+          <div class="p-8 sm:p-10 rounded-2xl bg-brand-surface/60 border border-brand-border/70 relative">
+            <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent rounded-l-2xl"></div>
+            <!-- EDIT: ABOUT_TEXT -->
+            <p class="text-stone-300 text-base sm:text-lg leading-relaxed pl-2"> I build and deliver outcomes-driven learning
+experiences that foster analytical thinking and
+develop practical skills competence among
+learners. </p>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================== -->
+      <!-- PROJECTS / WORK SAMPLES SECTION            -->
+      <!-- ========================================== -->
+      <section class="py-20 md:py-28 border-b border-brand-border/40 bg-brand-deep/30" id="projects">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-10">
+            <span class="p-2 rounded-lg bg-brand-surface border border-brand-border text-brand-accent">
+              <i class="w-5 h-5" data-lucide="folder-kanban"></i>
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white font-display">Projects / Work Samples</h2>
+          </div>
+          <!-- Exactly 3 Reusable Project Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="flex flex-col rounded-2xl bg-brand-surface border border-brand-border overflow-hidden transition-all duration-300 accent-glow-card group">
+              <div class="w-full h-48 overflow-hidden bg-brand-card relative">
+                <!-- EDIT: PROJECT_1_IMAGE -->
+                <img alt="Project image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://tse2.mm.bing.net/th/id/OIP.mz5Nqy3tyK3bkvH9aWGAzQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" />
+                <div class="absolute top-3 right-3 p-1.5 rounded-md bg-brand-dark/75 backdrop-blur-sm border border-brand-border text-brand-accent">
+                  <i class="w-4 h-4" data-lucide="presentation"></i>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                <div class="space-y-2">
+                  <!-- EDIT: PROJECT_1_TITLE -->
+                  <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors font-display"> Curriculum and Course Development </h3>
+                  <!-- EDIT: PROJECT_1_DESCRIPTION -->
+                  <p class="text-stone-300 text-sm leading-relaxed"> Course Syllabi | Technical Courses PPT | Conceptual Courses PPT </p>
+                </div>
+                <div class="pt-2">
+                  <!-- EDIT: PROJECT_1_LINK -->
+                  <a class="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accentLight transition-colors" href="#">
+                    <span>Project Link</span>
+                    <i class="w-4 h-4" data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="flex flex-col rounded-2xl bg-brand-surface border border-brand-border overflow-hidden transition-all duration-300 accent-glow-card group">
+              <div class="w-full h-48 overflow-hidden bg-brand-card relative">
+                <!-- EDIT: PROJECT_2_IMAGE -->
+                <img alt="Project image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://static.vecteezy.com/system/resources/previews/026/233/045/non_2x/pattern-background-free-vector.jpg" />
+                <div class="absolute top-3 right-3 p-1.5 rounded-md bg-brand-dark/75 backdrop-blur-sm border border-brand-border text-brand-accent">
+                  <i class="w-4 h-4" data-lucide="book-open"></i>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                <div class="space-y-2">
+                  <!-- EDIT: PROJECT_2_TITLE -->
+                  <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors font-display"> Corporate Excel Functions Course </h3>
+                  <!-- EDIT: PROJECT_2_DESCRIPTION -->
+                  <p class="text-stone-300 text-sm leading-relaxed"> Articulate 360 Storyline </p>
+                </div>
+                <div class="pt-2">
+                  <!-- EDIT: PROJECT_2_LINK -->
+                  <a class="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accentLight transition-colors" href="https://parosendoportfolio.gnomio.com/course/view.php?id=2">
+                    <span>https://parosendoportfolio.gnomio.com/course/view.php?id=2</span>
+                    <i class="w-4 h-4" data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flex flex-col rounded-2xl bg-brand-surface border border-brand-border overflow-hidden transition-all duration-300 accent-glow-card group">
+              <div class="w-full h-48 overflow-hidden bg-brand-card relative">
+                <!-- EDIT: PROJECT_3_IMAGE -->
+                <img alt="Project image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://img.freepik.com/premium-vector/4k-pattern-vector-illustration_969863-9120.jpg" />
+                <div class="absolute top-3 right-3 p-1.5 rounded-md bg-brand-dark/75 backdrop-blur-sm border border-brand-border text-brand-accent">
+                  <i class="w-4 h-4" data-lucide="video"></i>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                <div class="space-y-2">
+                  <!-- EDIT: PROJECT_3_TITLE -->
+                  <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition-colors font-display"> Corporate T&D Short Course </h3>
+                  <!-- EDIT: PROJECT_3_DESCRIPTION -->
+                  <p class="text-stone-300 text-sm leading-relaxed"> Articulate 360 Rise </p>
+                </div>
+                <div class="pt-2">
+                  <!-- EDIT: PROJECT_3_LINK -->
+                  <a class="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accentLight transition-colors" href="https://parosendoportfolio.gnomio.com/course/view.php?id=3">
+                    <span>https://parosendoportfolio.gnomio.com/course/view.php?id=3</span>
+                    <i class="w-4 h-4" data-lucide="external-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================== -->
+      <!-- SKILLS / TOOLS SECTION                     -->
+      <!-- ========================================== -->
+      <section class="py-20 md:py-28 border-b border-brand-border/40" id="skills-tools">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-10">
+            <span class="p-2 rounded-lg bg-brand-surface border border-brand-border text-brand-accent">
+              <i class="w-5 h-5" data-lucide="cpu"></i>
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white font-display">Skills / Tools</h2>
+          </div>
+          <!-- Exactly 2 Reusable Cards: Skills and Tools / Technologies -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1: Skills -->
+            <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border flex flex-col space-y-6">
+              <div class="flex items-center gap-3 border-b border-brand-border/60 pb-4">
+                <span class="p-2 rounded-lg bg-brand-card text-brand-accent border border-brand-border">
+                  <i class="w-5 h-5" data-lucide="graduation-cap"></i>
+                </span>
+                <h3 class="text-xl font-bold text-white font-display">Skills</h3>
+              </div>
+              <!-- EDIT: SKILLS_LIST -->
+              <ul class="space-y-3 text-stone-200">
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="check-circle-2"></i>
+                  <span class="text-sm font-medium">Instructional Design</span>
+                </li>
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="check-circle-2"></i>
+                  <span class="text-sm font-medium">e-Learning Technologies</span>
+                </li>
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="check-circle-2"></i>
+                  <span class="text-sm font-medium">Training Delivery and Facilitation</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Card 2: Tools / Technologies -->
+            <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border flex flex-col space-y-6">
+              <div class="flex items-center gap-3 border-b border-brand-border/60 pb-4">
+                <span class="p-2 rounded-lg bg-brand-card text-brand-accent border border-brand-border">
+                  <i class="w-5 h-5" data-lucide="wrench"></i>
+                </span>
+                <h3 class="text-xl font-bold text-white font-display">Tools / Technologies</h3>
+              </div>
+              <!-- EDIT: TOOLS_LIST -->
+              <ul class="space-y-3 text-stone-200">
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="terminal"></i>
+                  <span class="text-sm font-medium">Articulate Storyline</span>
+                </li>
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="terminal"></i>
+                  <span class="text-sm font-medium">MS Excel + Power BI</span>
+                </li>
+                <li class="flex items-center gap-3 p-3 rounded-xl bg-brand-card/50 border border-brand-border/60">
+                  <i class="w-4 h-4 text-brand-accent flex-shrink-0" data-lucide="terminal"></i>
+                  <span class="text-sm font-medium">Adobe Captivate</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================== -->
+      <!-- CONTACT SECTION                            -->
+      <!-- ========================================== -->
+      <section class="py-20 md:py-28 border-b border-brand-border/40 bg-brand-deep/30" id="contact">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="flex items-center gap-3 mb-10">
+            <span class="p-2 rounded-lg bg-brand-surface border border-brand-border text-brand-accent">
+              <i class="w-5 h-5" data-lucide="mail"></i>
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white font-display">Contact</h2>
+          </div>
+          <div class="p-8 sm:p-10 rounded-2xl bg-brand-surface border border-brand-border shadow-xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Email -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/60 border border-brand-border/60">
+                <span class="p-2.5 rounded-lg bg-brand-dark text-brand-accent border border-brand-border flex-shrink-0">
+                  <i class="w-5 h-5" data-lucide="at-sign"></i>
+                </span>
+                <div class="space-y-1">
+                  <span class="text-xs uppercase tracking-wider font-semibold text-stone-400">Email</span>
+                  <!-- EDIT: CONTACT_EMAIL -->
+                  <p class="text-sm sm:text-base font-medium text-white">rosendo.pierce19@gmail.com</p>
+                </div>
+              </div>
+              <!-- Contact Information -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card/60 border border-brand-border/60">
+                <span class="p-2.5 rounded-lg bg-brand-dark text-brand-accent border border-brand-border flex-shrink-0">
+                  <i class="w-5 h-5" data-lucide="phone-call"></i>
+                </span>
+                <div class="space-y-1">
+                  <span class="text-xs uppercase tracking-wider font-semibold text-stone-400">Contact Information</span>
+                  <!-- EDIT: CONTACT_INFORMATION -->
+                  <p class="text-sm sm:text-base font-medium text-white">+639561340900</p>
+                </div>
+              </div>
+            </div>
+            <!-- Social Link (Strictly placeholder <a> tag as required) -->
+            <div class="pt-2 border-t border-brand-border/60">
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-brand-card/40 border border-brand-border/60">
+                <span class="p-2.5 rounded-lg bg-brand-dark text-brand-accent border border-brand-border flex-shrink-0">
+                  <i class="w-5 h-5" data-lucide="share-2"></i>
+                </span>
+                <div class="flex-grow space-y-1">
+                  <span class="text-xs uppercase tracking-wider font-semibold text-stone-400">Social</span>
+                  <div>
+                    <!-- EDIT: SOCIAL_LINK -->
+                    <a class="text-sm sm:text-base font-medium text-brand-accent hover:text-brand-accentLight underline decoration-brand-accent/50 underline-offset-4 transition-colors" href="#"> LinkedIn: Pierce Andreas Rosendo </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="py-8 bg-brand-deep border-t border-brand-border/60">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <div class="flex items-center gap-2">
+          <i class="w-4 h-4 text-brand-accent" data-lucide="layers"></i>
+          <span class="font-display font-semibold text-stone-300">FCBPortfolio</span>
+          <span>© <span id="year"></span>. All rights reserved. </span>
+        </div>
+        <div class="flex items-center gap-4 text-stone-400">
+          <a class="hover:text-brand-accent transition-colors" href="#hero">Back to top</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Responsive Mobile Nav Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileNav = document.getElementById('mobile-nav');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('hidden');
+          mobileNav.classList.toggle('flex');
+        });
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('flex');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
